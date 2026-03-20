@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 140" width="400" height="140">
+  <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Sora:wght@800&amp;display=swap');</style>
+  </defs>
+  <!-- Mark -->
+  <rect x="0" y="0" width="120" height="120" rx="16" fill="#E8512A"/>
+  <text font-family="'Sora',sans-serif" font-weight="800" font-size="54" fill="#FFFFFF" x="60" y="84" text-anchor="middle" letter-spacing="-2">DMS</text>
+  <!-- Wordmark -->
+  <text font-family="'Sora',sans-serif" font-weight="800" font-size="28" fill="#1A1A1A" x="140" y="56" letter-spacing="-0.5">Devon Marketing</text>
+  <text font-family="'Sora',sans-serif" font-weight="800" font-size="28" fill="#1A1A1A" x="140" y="90" letter-spacing="-0.5">Services</text>
+  <line x1="140" y1="98" x2="395" y2="98" stroke="#E8512A" stroke-width="2"/>
+  <text font-family="'Sora',sans-serif" font-weight="400" font-size="10" fill="#aaaaaa" x="140" y="114" letter-spacing="2.5">WEST END QUALITY · WEST COUNTRY PRICES</text>
+</svg>
