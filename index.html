@@ -60,7 +60,6 @@
     .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
     .service-card{background:var(--light-grey);border-radius:10px;padding:1.8rem;transition:all .22s;border:1.5px solid transparent}
     .service-card:hover{background:white;border-color:var(--coral);transform:translateY(-3px);box-shadow:0 8px 30px rgba(232,81,42,.1)}
-    .service-icon{font-size:1.8rem;margin-bottom:.9rem}
     .service-card h3{font-family:'Sora',sans-serif;font-size:1rem;font-weight:700;color:var(--charcoal);margin-bottom:.5rem}
     .service-card p{font-size:.85rem;color:var(--mid-grey);line-height:1.65}
     .service-price{display:inline-block;margin-top:1rem;font-size:.8rem;font-weight:600;color:white;background:var(--coral);padding:.2rem .7rem;border-radius:4px}
@@ -90,30 +89,13 @@
     .btn-bundle:hover{background:rgba(255,255,255,.1)}
     .bundle-card.featured .btn-bundle{background:white;border-color:white;color:var(--coral)}
     .bundle-card.featured .btn-bundle:hover{background:rgba(255,255,255,.9)}
-    .alacarte{background:var(--coral-pale)}
-    .alacarte-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:3rem}
-    .alacarte-item{background:white;border-radius:8px;padding:1.4rem;border:1.5px solid var(--border);transition:all .2s}
-    .alacarte-item:hover{border-color:var(--coral);box-shadow:0 4px 16px rgba(232,81,42,.08)}
-    .alacarte-item h4{font-family:'Sora',sans-serif;font-size:.875rem;font-weight:700;color:var(--charcoal);margin-bottom:.35rem}
-    .alacarte-item p{font-size:.775rem;color:#999;line-height:1.5;margin-bottom:.8rem}
-    .alacarte-item .price{font-family:'Sora',sans-serif;font-size:1.1rem;font-weight:800;color:var(--charcoal)}
-    .alacarte-item .price span{font-family:'DM Sans',sans-serif;font-size:.73rem;color:#bbb;font-weight:400}
-    .how{background:white}
-    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:3rem;margin-top:3.5rem;position:relative}
-    .steps::before{content:'';position:absolute;top:1.75rem;left:calc(16.6% + 1rem);right:calc(16.6% + 1rem);height:2px;background:var(--coral-light)}
-    .step{text-align:center}
-    .step-num{width:3.5rem;height:3.5rem;border-radius:50%;background:var(--coral);color:white;font-family:'Sora',sans-serif;font-size:1.1rem;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 1.2rem;position:relative;z-index:1}
-    .step h4{font-family:'Sora',sans-serif;font-size:.9rem;font-weight:700;color:var(--charcoal);margin-bottom:.5rem}
-    .step p{font-size:.8rem;color:var(--mid-grey);line-height:1.6}
-    /* ── SELECTOR ── */
     .selector{background:var(--light-grey)}
     .selector-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2.5rem}
     .selector-tile{background:white;border:2px solid var(--border);border-radius:10px;padding:1.4rem 1rem;text-align:center;cursor:pointer;transition:all .2s;user-select:none}
     .selector-tile:hover{border-color:var(--coral);transform:translateY(-2px)}
     .selector-tile.selected{border-color:var(--coral);background:var(--coral-light)}
-    .selector-tile.selected .tile-icon{background:var(--coral)}
-    .selector-tile.selected .tile-icon span{filter:brightness(10)}
-    .tile-icon{width:48px;height:48px;border-radius:10px;background:var(--light-grey);display:flex;align-items:center;justify-content:center;margin:0 auto .8rem;font-size:1.4rem;transition:background .2s}
+    .selector-tile.selected .tile-icon{background:var(--coral);color:white}
+    .tile-icon{width:48px;height:48px;border-radius:10px;background:var(--light-grey);display:flex;align-items:center;justify-content:center;margin:0 auto .8rem;font-size:1.3rem;transition:background .2s}
     .tile-label{font-family:'Sora',sans-serif;font-size:.8rem;font-weight:700;color:var(--charcoal);margin-bottom:.2rem}
     .tile-price{font-size:.72rem;color:var(--mid-grey)}
     .selector-cta{margin-top:2rem;text-align:center}
@@ -121,13 +103,19 @@
     .btn-selector{display:inline-block;background:var(--coral);color:white;padding:1rem 2.5rem;font-family:'Sora',sans-serif;font-size:.95rem;font-weight:700;border:none;border-radius:6px;cursor:pointer;transition:background .2s,transform .15s}
     .btn-selector:hover{background:var(--coral-dark);transform:translateY(-2px)}
     .btn-selector:disabled{background:#ccc;cursor:not-allowed;transform:none}
-    /* ── CONTACT ── */
-    .contact-section{background:white;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
+    .how{background:white}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:3rem;margin-top:3.5rem;position:relative}
+    .steps::before{content:'';position:absolute;top:1.75rem;left:calc(16.6% + 1rem);right:calc(16.6% + 1rem);height:2px;background:var(--coral-light)}
+    .step{text-align:center}
+    .step-num{width:3.5rem;height:3.5rem;border-radius:50%;background:var(--coral);color:white;font-family:'Sora',sans-serif;font-size:1.1rem;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 1.2rem;position:relative;z-index:1}
+    .step h4{font-family:'Sora',sans-serif;font-size:.9rem;font-weight:700;color:var(--charcoal);margin-bottom:.5rem}
+    .step p{font-size:.8rem;color:var(--mid-grey);line-height:1.6}
+    .contact-section{background:var(--coral-pale);display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
     .contact-left p{font-size:1rem;color:var(--mid-grey);line-height:1.7;margin-bottom:2rem}
     .contact-promise{display:flex;flex-direction:column;gap:.9rem}
     .promise-item{display:flex;align-items:center;gap:.75rem;font-size:.875rem;color:var(--charcoal);font-weight:500}
     .promise-icon{width:26px;height:26px;background:var(--coral);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:700;flex-shrink:0;color:white}
-    .contact-form{background:var(--light-grey);border-radius:12px;padding:2.5rem;border:1.5px solid var(--border)}
+    .contact-form{background:white;border-radius:12px;padding:2.5rem;box-shadow:0 4px 30px rgba(0,0,0,.06)}
     .contact-form h3{font-family:'Sora',sans-serif;font-size:1.3rem;font-weight:800;color:var(--charcoal);letter-spacing:-.02em;margin-bottom:.5rem}
     .selected-services-summary{font-size:.82rem;color:var(--coral);font-weight:600;margin-bottom:1.5rem;min-height:1.2rem}
     .form-group{margin-bottom:1.1rem}
@@ -165,11 +153,12 @@
     @keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
     .hero-left>*{animation:fadeUp .6s ease both}
     .hero-eyebrow{animation-delay:.05s}.hero h1{animation-delay:.15s}.hero-strapline{animation-delay:.28s}.hero-actions{animation-delay:.4s}
-    @media(max-width:1024px){.hero{grid-template-columns:1fr}.hero-right{display:none}.hero-left{padding:5rem 2rem 4rem}.about{grid-template-columns:1fr;gap:2.5rem}.services-grid{grid-template-columns:1fr 1fr}.bundles-grid{grid-template-columns:1fr}.bundle-card.featured{transform:none}.alacarte-grid{grid-template-columns:1fr 1fr}.selector-grid{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:1fr}.contact-section{grid-template-columns:1fr;gap:2rem}nav{padding:1rem 1.5rem}nav ul{display:none}section{padding:4rem 2rem}.trust-bar{padding:1rem 2rem}footer{padding:2rem}.footer-top{flex-direction:column;align-items:flex-start}}
-    @media(max-width:600px){.services-grid,.alacarte-grid,.selector-grid{grid-template-columns:1fr 1fr}.about-stats{grid-template-columns:1fr 1fr}.form-row{grid-template-columns:1fr}.hero h1{font-size:2.2rem}}
+    @media(max-width:1024px){.hero{grid-template-columns:1fr}.hero-right{display:none}.hero-left{padding:5rem 2rem 4rem}.about{grid-template-columns:1fr;gap:2.5rem}.services-grid{grid-template-columns:1fr 1fr}.bundles-grid{grid-template-columns:1fr}.bundle-card.featured{transform:none}.selector-grid{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:1fr}.contact-section{grid-template-columns:1fr;gap:2rem}nav{padding:1rem 1.5rem}nav ul{display:none}section{padding:4rem 2rem}.trust-bar{padding:1rem 2rem}footer{padding:2rem}.footer-top{flex-direction:column;align-items:flex-start}}
+    @media(max-width:600px){.services-grid,.selector-grid{grid-template-columns:1fr 1fr}.about-stats{grid-template-columns:1fr 1fr}.form-row{grid-template-columns:1fr}.hero h1{font-size:2.2rem}}
   </style>
 </head>
 <body>
+
   <nav>
     <a href="#" class="nav-logo">
       <div class="nav-logo-mark">DMS</div>
@@ -209,74 +198,63 @@
     <div class="trust-item">✦ <strong>West Country</strong>&nbsp;based &amp; proud</div>
   </div>
 
-  <!-- SERVICES -->
   <section class="services" id="services">
     <div class="services-header">
       <div>
         <div class="section-eyebrow">What We Do</div>
-        <h2 class="section-title">Everything your business needs to stand out</h2>
+        <h2 class="section-title">Everything you need made easy</h2>
       </div>
       <p class="section-subtitle">Pick what you need individually, or take one of our ready-made packages below.</p>
     </div>
     <div class="services-grid">
       <div class="service-card">
-        <div class="service-icon">🎨</div>
         <h3>Logo Design</h3>
-        <p>Your logo is the face of your business. We'll create something distinctive and professional that instantly tells customers who you are and why you're the right choice — delivered in every format you'll ever need.</p>
+        <p>A distinctive logo that tells customers who you are and why you're the right choice — delivered in every format you'll ever need.</p>
         <span class="service-price">From £300</span>
       </div>
       <div class="service-card">
-        <div class="service-icon">🌐</div>
         <h3>Website Design &amp; Build</h3>
-        <p>Your website works for you 24/7. We build clean, fast, mobile-ready sites that make it easy for customers to find you, trust you and get in touch — so you spend less time chasing work and more time doing it.</p>
+        <p>A fast, mobile-ready site that makes it easy for customers to find you, trust you and get in touch — working for you 24/7.</p>
         <span class="service-price">From £500</span>
       </div>
       <div class="service-card">
-        <div class="service-icon">📍</div>
         <h3>Google Business Profile</h3>
-        <p>When someone searches for your trade or service nearby, you need to show up. We set up and optimise your Google Business Profile so local customers find you first — often the single quickest win for any local business.</p>
+        <p>When someone searches for your trade nearby, you need to show up. We set it up properly so local customers find you first.</p>
         <span class="service-price">£150</span>
       </div>
       <div class="service-card">
-        <div class="service-icon">📱</div>
         <h3>Social Media Setup &amp; Content</h3>
-        <p>Get your social presence looking sharp from day one. We set up your profiles properly and write a bank of posts in your voice — so you always have something engaging to share without having to think about it.</p>
+        <p>Sharp profiles and a bank of posts written in your voice — so you always have something engaging to share without the headache.</p>
         <span class="service-price">From £300</span>
       </div>
       <div class="service-card">
-        <div class="service-icon">🔍</div>
         <h3>Search Engine Optimisation</h3>
-        <p>Being on Google's first page isn't luck — it's good SEO. We optimise your site so that when local customers search for what you do, your business is front and centre, not buried where no one looks.</p>
+        <p>We optimise your site so local customers searching for what you do find your business first, not your competitors.</p>
         <span class="service-price">From £300</span>
       </div>
       <div class="service-card">
-        <div class="service-icon">✉️</div>
         <h3>Email Newsletter Setup</h3>
-        <p>Stay front of mind with your customers without being pushy. A well-designed newsletter keeps your audience warm, drives repeat business and reminds people you exist — we set it all up and write your first campaigns too.</p>
+        <p>Stay front of mind without being pushy. We set up your newsletter and write your first campaigns so you hit the ground running.</p>
         <span class="service-price">From £300</span>
       </div>
       <div class="service-card">
-        <div class="service-icon">✍️</div>
         <h3>Copywriting</h3>
-        <p>The right words win customers. We write website pages, About sections and marketing materials that speak directly to your customers' needs — clearly, confidently, and in a voice that sounds like you at your best.</p>
+        <p>Words that win customers — website pages, About sections and marketing materials written to sell, clearly and confidently.</p>
         <span class="service-price">From £75/page</span>
       </div>
       <div class="service-card">
-        <div class="service-icon">📊</div>
         <h3>Social Media Management</h3>
-        <p>Consistent social media builds trust and keeps your business visible. We handle the content, scheduling and day-to-day monitoring so your channels stay active and professional — without taking up your time.</p>
+        <p>We handle content, scheduling and monitoring every month so your channels stay active and professional without taking up your time.</p>
         <span class="service-price">From £200/month</span>
       </div>
       <div class="service-card">
-        <div class="service-icon">🖨️</div>
         <h3>Marketing Collateral</h3>
-        <p>Flyers, posters and business cards that actually reflect the quality of your work. We design everything to look the part and supply print-ready files — so handing something over to a customer becomes a proud moment.</p>
+        <p>Flyers, posters and business cards that reflect the quality of your work — designed professionally, supplied print-ready.</p>
         <span class="service-price">From £150</span>
       </div>
     </div>
   </section>
 
-  <!-- PACKAGES -->
   <section class="bundles" id="packages">
     <div class="bundles-header">
       <div class="section-eyebrow">Packages</div>
@@ -285,7 +263,7 @@
     </div>
     <div class="bundles-grid">
       <div class="bundle-card">
-        <div class="bundle-name">The Starter</div>
+        <div class="bundle-name">The Basics</div>
         <div class="bundle-tagline">Get your business properly on the map</div>
         <div class="bundle-price">£499</div>
         <div class="bundle-price-note">50% deposit, 50% on delivery</div>
@@ -301,12 +279,12 @@
       </div>
       <div class="bundle-card featured">
         <div class="bundle-badge">Most Popular</div>
-        <div class="bundle-name">The Growing Business</div>
+        <div class="bundle-name">The Professional</div>
         <div class="bundle-tagline">Everything you need to grow with confidence</div>
         <div class="bundle-price">£999</div>
         <div class="bundle-price-note">50% deposit, 50% on delivery</div>
         <ul class="bundle-features">
-          <li>Everything in The Starter</li>
+          <li>Everything in The Basics</li>
           <li>Full 5-page website (mobile-optimised)</li>
           <li>Social media setup on 2 platforms</li>
           <li>30 pre-written social posts</li>
@@ -316,47 +294,27 @@
         <a href="#selector" class="btn-bundle">Get Started</a>
       </div>
       <div class="bundle-card">
-        <div class="bundle-name">The Full Monty</div>
+        <div class="bundle-name">The Ambitious Business</div>
         <div class="bundle-tagline">The complete marketing launchpad</div>
         <div class="bundle-price">£1,749</div>
         <div class="bundle-price-note">50% deposit, 50% on delivery</div>
         <ul class="bundle-features">
-          <li>Everything in The Growing Business</li>
+          <li>Everything in The Professional</li>
           <li>Copywriting for 3 pages (1 revision included)</li>
           <li>Marketing collateral (2 designs)</li>
           <li>3 months social media management</li>
           <li>Priority support</li>
-          <li>Optional: ongoing website maintenance on simple low-cost contracts</li>
+          <li>Ongoing website maintenance available on simple low-cost contracts</li>
         </ul>
         <a href="#selector" class="btn-bundle">Get Started</a>
       </div>
     </div>
   </section>
 
-  <!-- À LA CARTE -->
-  <section class="alacarte" id="alacarte">
-    <div class="section-eyebrow">À La Carte</div>
-    <h2 class="section-title">Just need one thing? No problem.</h2>
-    <p class="section-subtitle">All services available individually. Fixed prices, fixed scope — no surprises.</p>
-    <div class="alacarte-grid">
-      <div class="alacarte-item"><h4>Logo Design</h4><p>3 concepts, 1 revision, all formats</p><div class="price">From £300</div></div>
-      <div class="alacarte-item"><h4>3-Page Website</h4><p>Mobile-ready, SEO-optimised</p><div class="price">£500–£800</div></div>
-      <div class="alacarte-item"><h4>5-Page Website</h4><p>Full site, mobile-ready, SEO-optimised</p><div class="price">£800–£1,200</div></div>
-      <div class="alacarte-item"><h4>Google Business Profile</h4><p>Setup, photos, description, categories</p><div class="price">£150</div></div>
-      <div class="alacarte-item"><h4>Social Media Setup</h4><p>Profile + 15–30 posts, per platform</p><div class="price">£300–£400</div></div>
-      <div class="alacarte-item"><h4>Social Media Management</h4><p>Monthly content &amp; scheduling</p><div class="price">£200–£350 <span>/month</span></div></div>
-      <div class="alacarte-item"><h4>SEO Setup</h4><p>On-page optimisation, local SEO</p><div class="price">£300–£500</div></div>
-      <div class="alacarte-item"><h4>Email Newsletter</h4><p>Template setup + 3 campaigns</p><div class="price">£300–£400</div></div>
-      <div class="alacarte-item"><h4>Copywriting</h4><p>Per page, written to sell</p><div class="price">£75–£150 <span>/page</span></div></div>
-      <div class="alacarte-item"><h4>Marketing Collateral</h4><p>Flyers, posters, cards — print-ready</p><div class="price">£150 <span>/design</span></div></div>
-    </div>
-  </section>
-
-  <!-- INTERACTIVE SELECTOR -->
   <section class="selector" id="selector">
     <div class="section-eyebrow">Get Started</div>
     <h2 class="section-title">What does your business need?</h2>
-    <p class="section-subtitle">Pick everything that applies — we'll pick it up from there.</p>
+    <p class="section-subtitle">Pick everything that applies — we'll take it from there.</p>
     <div class="selector-grid">
       <div class="selector-tile" data-service="Logo Design" onclick="toggleTile(this)">
         <div class="tile-icon"><span>🎨</span></div>
@@ -405,7 +363,6 @@
     </div>
   </section>
 
-  <!-- HOW IT WORKS -->
   <section class="how" id="how">
     <div style="text-align:center;margin-bottom:.5rem">
       <div class="section-eyebrow">How It Works</div>
@@ -416,7 +373,7 @@
       <div class="step">
         <div class="step-num">1</div>
         <h4>Pick What You Need</h4>
-        <p>Choose your services or package above. Tell us a bit about your business — no forms, no faff. We'll come back to you fast.</p>
+        <p>Select your services above and tell us a bit about your business. No lengthy forms, no waffle — just what you need.</p>
       </div>
       <div class="step">
         <div class="step-num">2</div>
@@ -426,12 +383,11 @@
       <div class="step">
         <div class="step-num">3</div>
         <h4>Done. Fast.</h4>
-        <p>We deliver, you review, we refine. Balance due on sign-off. Everything handed over and yours to keep forever.</p>
+        <p>We deliver, you review, we refine. Balance on sign-off. Everything handed over and yours to keep forever.</p>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
   <section class="contact-section" id="contact">
     <div class="contact-left">
       <div class="section-eyebrow">Let's Go</div>
@@ -465,13 +421,11 @@
     </div>
   </section>
 
-  <!-- ABOUT -->
   <section class="about" id="about">
     <div>
       <div class="section-eyebrow">Who We Are</div>
-      <h2 class="section-title">Big brand thinking for small business budgets</h2>
-      <p class="section-subtitle">Devon Marketing Services was founded by a senior marketeer with 24 years inside major global brands — and then 12 years advising over 100 growing businesses as a consultant. Now based in Devon, we bring that depth of experience directly to tradespeople, service businesses and independent operators across the West Country.</p>
-      <p class="section-subtitle" style="margin-top:1rem">We use the best modern tools to deliver quality work at prices that make sense for a local business. No fluff, no filler — just proper marketing that works.</p>
+      <h2 class="section-title">36 years of big-brand experience. Now working for you.</h2>
+      <p class="section-subtitle">We've spent decades building major brands and advising over 100 growing businesses. Now we're bringing that expertise directly to tradespeople, service businesses and independent operators across the West Country — at prices that actually make sense.</p>
       <div class="about-stats">
         <div class="stat-box"><div class="num">24</div><div class="label">Years inside major brands</div></div>
         <div class="stat-box"><div class="num">12</div><div class="label">Years as marketing consultant</div></div>
@@ -503,7 +457,6 @@
 
   <script>
     const selected = new Set();
-
     function toggleTile(el) {
       const svc = el.dataset.service;
       if (selected.has(svc)) { selected.delete(svc); el.classList.remove('selected'); }
@@ -515,17 +468,15 @@
         hint.textContent = 'Selected: ' + [...selected].join(', ');
       } else {
         btn.disabled = true;
-        hint.textContent = 'Select what you need above, then hit the button — we\'ll take it from there.';
+        hint.textContent = "Select what you need above, then hit the button — we'll take it from there.";
       }
     }
-
     function goToContact() {
       const summary = [...selected].join(', ');
       document.getElementById('hiddenServices').value = summary;
       document.getElementById('formServicesSummary').textContent = summary ? 'Interested in: ' + summary : '';
       document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
     }
-
     const form = document.getElementById('contactForm');
     const success = document.getElementById('formSuccess');
     form.addEventListener('submit', async function(e) {
