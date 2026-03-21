@@ -22,9 +22,10 @@
     .nav-logo-mark{width:38px;height:38px;border-radius:8px;background:var(--coral);display:flex;align-items:center;justify-content:center;font-family:'Sora',sans-serif;font-weight:800;font-size:.8rem;color:white;letter-spacing:-.05em}
     .nav-logo-text{font-family:'Sora',sans-serif;font-size:.95rem;font-weight:700;color:var(--charcoal);line-height:1.2}
     .nav-logo-text span{display:block;font-family:'DM Sans',sans-serif;font-size:.58rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--mid-grey)}
-    nav ul{list-style:none;display:flex;gap:2.5rem}
+    nav ul{list-style:none;display:flex;gap:2.5rem;align-items:center}
     nav ul a{text-decoration:none;font-size:.875rem;font-weight:500;color:var(--charcoal);transition:color .2s}
     nav ul a:hover{color:var(--coral)}
+    .nav-highlight{color:var(--coral)!important;font-weight:700!important}
     .nav-cta{background:var(--coral)!important;color:white!important;padding:.6rem 1.4rem;border-radius:6px;font-weight:600!important;transition:background .2s!important}
     .nav-cta:hover{background:var(--coral-dark)!important}
     .hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding-top:80px;background:var(--coral-pale);position:relative;overflow:hidden}
@@ -55,6 +56,13 @@
     .section-eyebrow{display:inline-block;font-size:.68rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--coral);margin-bottom:.8rem}
     .section-title{font-family:'Sora',sans-serif;font-size:clamp(1.8rem,2.5vw,2.4rem);font-weight:800;color:var(--charcoal);line-height:1.15;letter-spacing:-.02em;margin-bottom:1rem}
     .section-subtitle{font-size:1rem;color:var(--mid-grey);line-height:1.7;max-width:560px}
+    /* path-chooser banner between sections */
+    .path-banner{background:var(--coral-pale);border-top:2px solid rgba(232,81,42,.15);border-bottom:2px solid rgba(232,81,42,.15);padding:2rem 6rem;display:flex;align-items:center;justify-content:center;gap:3rem;flex-wrap:wrap}
+    .path-option{display:flex;flex-direction:column;align-items:center;gap:.4rem;text-decoration:none;padding:1.2rem 2.5rem;border-radius:10px;border:2px solid transparent;transition:all .2s;text-align:center}
+    .path-option:hover{border-color:var(--coral);background:white}
+    .path-option-label{font-family:'Sora',sans-serif;font-size:1rem;font-weight:800;color:var(--charcoal)}
+    .path-option-sub{font-size:.8rem;color:var(--mid-grey)}
+    .path-or{font-family:'Sora',sans-serif;font-size:1.1rem;font-weight:800;color:var(--coral)}
     .services{background:white}
     .services-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:3rem;flex-wrap:wrap;gap:1rem}
     .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
@@ -153,7 +161,7 @@
     @keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
     .hero-left>*{animation:fadeUp .6s ease both}
     .hero-eyebrow{animation-delay:.05s}.hero h1{animation-delay:.15s}.hero-strapline{animation-delay:.28s}.hero-actions{animation-delay:.4s}
-    @media(max-width:1024px){.hero{grid-template-columns:1fr}.hero-right{display:none}.hero-left{padding:5rem 2rem 4rem}.about{grid-template-columns:1fr;gap:2.5rem}.services-grid{grid-template-columns:1fr 1fr}.bundles-grid{grid-template-columns:1fr}.bundle-card.featured{transform:none}.selector-grid{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:1fr}.contact-section{grid-template-columns:1fr;gap:2rem}nav{padding:1rem 1.5rem}nav ul{display:none}section{padding:4rem 2rem}.trust-bar{padding:1rem 2rem}footer{padding:2rem}.footer-top{flex-direction:column;align-items:flex-start}}
+    @media(max-width:1024px){.hero{grid-template-columns:1fr}.hero-right{display:none}.hero-left{padding:5rem 2rem 4rem}.about{grid-template-columns:1fr;gap:2.5rem}.services-grid{grid-template-columns:1fr 1fr}.bundles-grid{grid-template-columns:1fr}.bundle-card.featured{transform:none}.selector-grid{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:1fr}.contact-section{grid-template-columns:1fr;gap:2rem}nav{padding:1rem 1.5rem}nav ul{display:none}section{padding:4rem 2rem}.trust-bar{padding:1rem 2rem}.path-banner{padding:1.5rem 2rem;gap:1.5rem}footer{padding:2rem}.footer-top{flex-direction:column;align-items:flex-start}}
     @media(max-width:600px){.services-grid,.selector-grid{grid-template-columns:1fr 1fr}.about-stats{grid-template-columns:1fr 1fr}.form-row{grid-template-columns:1fr}.hero h1{font-size:2.2rem}}
   </style>
 </head>
@@ -166,7 +174,8 @@
     </a>
     <ul>
       <li><a href="#services">Services</a></li>
-      <li><a href="#packages">Packages</a></li>
+      <li><a href="#bundles" class="nav-highlight">Bundles</a></li>
+      <li><a href="#selector" class="nav-highlight">Build Your Own</a></li>
       <li><a href="#how">How It Works</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#contact" class="nav-cta">Get Started</a></li>
@@ -179,8 +188,8 @@
       <h1>Fast, friendly<br/>marketing for<br/><span class="highlight">West Country</span><br/>businesses</h1>
       <p class="hero-strapline"><strong>West End quality at West Country prices.</strong> Whether you're a plumber, electrician, landscape gardener, tree surgeon, personal trainer, dog walker, locksmith or any kind of independent local business — we'll make you look brilliant and get you found.</p>
       <div class="hero-actions">
-        <a href="#selector" class="btn-primary">See How We Can Help</a>
-        <a href="#contact" class="btn-secondary">Have a Chat</a>
+        <a href="#bundles" class="btn-primary">See Our Bundles</a>
+        <a href="#selector" class="btn-secondary">Build Your Own</a>
       </div>
     </div>
     <div class="hero-right">
@@ -204,158 +213,104 @@
         <div class="section-eyebrow">What We Do</div>
         <h2 class="section-title">Everything you need made easy</h2>
       </div>
-      <p class="section-subtitle">Pick what you need individually, or take one of our ready-made packages below.</p>
+      <p class="section-subtitle">Pick a ready-made bundle, or choose exactly what you need — one service at a time.</p>
     </div>
     <div class="services-grid">
-      <div class="service-card">
-        <h3>Logo Design</h3>
-        <p>A distinctive logo that tells customers who you are and why you're the right choice — delivered in every format you'll ever need.</p>
-        <span class="service-price">From £300</span>
-      </div>
-      <div class="service-card">
-        <h3>Website Design &amp; Build</h3>
-        <p>A fast, mobile-ready site that makes it easy for customers to find you, trust you and get in touch — working for you 24/7.</p>
-        <span class="service-price">From £500</span>
-      </div>
-      <div class="service-card">
-        <h3>Google Business Profile</h3>
-        <p>When someone searches for your trade nearby, you need to show up. We set it up properly so local customers find you first.</p>
-        <span class="service-price">£150</span>
-      </div>
-      <div class="service-card">
-        <h3>Social Media Setup &amp; Content</h3>
-        <p>Sharp profiles and a bank of posts written in your voice — so you always have something engaging to share without the headache.</p>
-        <span class="service-price">From £300</span>
-      </div>
-      <div class="service-card">
-        <h3>Search Engine Optimisation</h3>
-        <p>We optimise your site so local customers searching for what you do find your business first, not your competitors.</p>
-        <span class="service-price">From £300</span>
-      </div>
-      <div class="service-card">
-        <h3>Email Newsletter Setup</h3>
-        <p>Stay front of mind without being pushy. We set up your newsletter and write your first campaigns so you hit the ground running.</p>
-        <span class="service-price">From £300</span>
-      </div>
-      <div class="service-card">
-        <h3>Copywriting</h3>
-        <p>Words that win customers — website pages, About sections and marketing materials written to sell, clearly and confidently.</p>
-        <span class="service-price">From £75/page</span>
-      </div>
-      <div class="service-card">
-        <h3>Social Media Management</h3>
-        <p>We handle content, scheduling and monitoring every month so your channels stay active and professional without taking up your time.</p>
-        <span class="service-price">From £200/month</span>
-      </div>
-      <div class="service-card">
-        <h3>Marketing Collateral</h3>
-        <p>Flyers, posters and business cards that reflect the quality of your work — designed professionally, supplied print-ready.</p>
-        <span class="service-price">From £150</span>
-      </div>
+      <div class="service-card"><h3>Logo Design</h3><p>A distinctive logo that tells customers who you are and why you're the right choice — delivered in every format you'll ever need.</p><span class="service-price">From £300</span></div>
+      <div class="service-card"><h3>Website Design &amp; Build</h3><p>A fast, mobile-ready site that makes it easy for customers to find you, trust you and get in touch — working for you 24/7.</p><span class="service-price">From £500</span></div>
+      <div class="service-card"><h3>Google Business Profile</h3><p>When someone searches for your trade nearby, you need to show up. We set it up properly so local customers find you first.</p><span class="service-price">£150</span></div>
+      <div class="service-card"><h3>Social Media Setup &amp; Content</h3><p>Sharp profiles and a bank of posts written in your voice — so you always have something engaging to share without the headache.</p><span class="service-price">From £300</span></div>
+      <div class="service-card"><h3>Search Engine Optimisation</h3><p>We optimise your site so local customers searching for what you do find your business first, not your competitors.</p><span class="service-price">From £300</span></div>
+      <div class="service-card"><h3>Email Newsletter Setup</h3><p>Stay front of mind without being pushy. We set up your newsletter and write your first campaigns so you hit the ground running.</p><span class="service-price">From £300</span></div>
+      <div class="service-card"><h3>Copywriting</h3><p>Words that win customers — website pages, About sections and marketing materials written to sell, clearly and confidently.</p><span class="service-price">From £75/page</span></div>
+      <div class="service-card"><h3>Social Media Management</h3><p>We handle content, scheduling and monitoring every month so your channels stay active and professional without taking up your time.</p><span class="service-price">From £200/month</span></div>
+      <div class="service-card"><h3>Marketing Collateral</h3><p>Flyers, posters and business cards that reflect the quality of your work — designed professionally, supplied print-ready.</p><span class="service-price">From £150</span></div>
     </div>
   </section>
 
-  <section class="bundles" id="packages">
+  <!-- PATH CHOOSER -->
+  <div class="path-banner">
+    <a href="#bundles" class="path-option">
+      <div class="path-option-label">Choose a Bundle</div>
+      <div class="path-option-sub">Pre-packaged, great value, ready to go</div>
+    </a>
+    <div class="path-or">or</div>
+    <a href="#selector" class="path-option">
+      <div class="path-option-label">Build Your Own</div>
+      <div class="path-option-sub">Pick only what your business needs</div>
+    </a>
+  </div>
+
+  <!-- BUNDLES -->
+  <section class="bundles" id="bundles">
     <div class="bundles-header">
-      <div class="section-eyebrow">Packages</div>
-      <h2 class="section-title">Pick the package that works for you</h2>
-      <p class="section-subtitle" style="margin:.5rem auto 0;color:rgba(255,255,255,.5);max-width:500px">Better value than buying separately. All packages include a 50% deposit to start, balance on delivery.</p>
+      <div class="section-eyebrow">Bundles</div>
+      <h2 class="section-title">Pick the bundle that works for you</h2>
+      <p class="section-subtitle" style="margin:.5rem auto 0;color:rgba(255,255,255,.5);max-width:520px">Pre-packaged for great value. All prices are exclusive of VAT. 50% deposit to start, balance on delivery.</p>
     </div>
     <div class="bundles-grid">
       <div class="bundle-card">
-        <div class="bundle-name">The Basics</div>
-        <div class="bundle-tagline">Get your business properly on the map</div>
-        <div class="bundle-price">£499</div>
-        <div class="bundle-price-note">50% deposit, 50% on delivery</div>
+        <div class="bundle-name">The Essentials</div>
+        <div class="bundle-tagline">Everything you need to get properly found</div>
+        <div class="bundle-price">£599</div>
+        <div class="bundle-price-note">+ VAT · 50% deposit, 50% on delivery</div>
         <ul class="bundle-features">
           <li>Logo design (3 concepts, 1 revision)</li>
           <li>3-page website, mobile-optimised</li>
           <li>Google Business Profile setup</li>
-          <li>Social media setup on 1 platform</li>
-          <li>15 pre-written social posts</li>
+          <li>Basic on-page SEO</li>
           <li>All files supplied in full</li>
         </ul>
-        <a href="#selector" class="btn-bundle">Get Started</a>
+        <a href="#contact" class="btn-bundle">Get Started</a>
       </div>
       <div class="bundle-card featured">
         <div class="bundle-badge">Most Popular</div>
         <div class="bundle-name">The Professional</div>
-        <div class="bundle-tagline">Everything you need to grow with confidence</div>
+        <div class="bundle-tagline">A complete online presence, ready to grow</div>
         <div class="bundle-price">£999</div>
-        <div class="bundle-price-note">50% deposit, 50% on delivery</div>
+        <div class="bundle-price-note">+ VAT · 50% deposit, 50% on delivery</div>
         <ul class="bundle-features">
-          <li>Everything in The Basics</li>
+          <li>Everything in The Essentials</li>
           <li>Full 5-page website (mobile-optimised)</li>
-          <li>Social media setup on 2 platforms</li>
+          <li>Social media setup on 1 platform</li>
           <li>30 pre-written social posts</li>
           <li>Email newsletter template &amp; setup</li>
           <li>First 3 newsletter campaigns written</li>
         </ul>
-        <a href="#selector" class="btn-bundle">Get Started</a>
+        <a href="#contact" class="btn-bundle">Get Started</a>
       </div>
       <div class="bundle-card">
         <div class="bundle-name">The Ambitious Business</div>
         <div class="bundle-tagline">The complete marketing launchpad</div>
         <div class="bundle-price">£1,749</div>
-        <div class="bundle-price-note">50% deposit, 50% on delivery</div>
+        <div class="bundle-price-note">+ VAT · 50% deposit, 50% on delivery</div>
         <ul class="bundle-features">
           <li>Everything in The Professional</li>
           <li>Copywriting for 3 pages (1 revision included)</li>
           <li>Marketing collateral (2 designs)</li>
           <li>3 months social media management</li>
           <li>Priority support</li>
-          <li>Ongoing website maintenance available on simple low-cost contracts</li>
+          <li>Optional: content refreshes, security updates &amp; site maintenance on affordable monthly plans</li>
         </ul>
-        <a href="#selector" class="btn-bundle">Get Started</a>
+        <a href="#contact" class="btn-bundle">Get Started</a>
       </div>
     </div>
   </section>
 
+  <!-- BUILD YOUR OWN -->
   <section class="selector" id="selector">
-    <div class="section-eyebrow">Get Started</div>
-    <h2 class="section-title">Choose what you need</h2>
-    <p class="section-subtitle">Tick everything that applies — we'll come back with a clear plan and a fixed price.</p>
+    <div class="section-eyebrow">Build Your Own</div>
+    <h2 class="section-title">Just want specific things? No problem.</h2>
+    <p class="section-subtitle">Tick everything that applies.</p>
     <div class="selector-grid">
-      <div class="selector-tile" data-service="Logo Design" onclick="toggleTile(this)">
-        <div class="tile-icon"><span>🎨</span></div>
-        <div class="tile-label">Logo Design</div>
-        <div class="tile-price">From £300</div>
-      </div>
-      <div class="selector-tile" data-service="Website" onclick="toggleTile(this)">
-        <div class="tile-icon"><span>🌐</span></div>
-        <div class="tile-label">Website</div>
-        <div class="tile-price">From £500</div>
-      </div>
-      <div class="selector-tile" data-service="Google Business Profile" onclick="toggleTile(this)">
-        <div class="tile-icon"><span>📍</span></div>
-        <div class="tile-label">Google Profile</div>
-        <div class="tile-price">£150</div>
-      </div>
-      <div class="selector-tile" data-service="Social Media" onclick="toggleTile(this)">
-        <div class="tile-icon"><span>📱</span></div>
-        <div class="tile-label">Social Media</div>
-        <div class="tile-price">From £300</div>
-      </div>
-      <div class="selector-tile" data-service="SEO" onclick="toggleTile(this)">
-        <div class="tile-icon"><span>🔍</span></div>
-        <div class="tile-label">SEO</div>
-        <div class="tile-price">From £300</div>
-      </div>
-      <div class="selector-tile" data-service="Email Newsletter" onclick="toggleTile(this)">
-        <div class="tile-icon"><span>✉️</span></div>
-        <div class="tile-label">Email Newsletter</div>
-        <div class="tile-price">From £300</div>
-      </div>
-      <div class="selector-tile" data-service="Copywriting" onclick="toggleTile(this)">
-        <div class="tile-icon"><span>✍️</span></div>
-        <div class="tile-label">Copywriting</div>
-        <div class="tile-price">From £75/page</div>
-      </div>
-      <div class="selector-tile" data-service="Marketing Collateral" onclick="toggleTile(this)">
-        <div class="tile-icon"><span>🖨️</span></div>
-        <div class="tile-label">Printed Materials</div>
-        <div class="tile-price">From £150</div>
-      </div>
+      <div class="selector-tile" data-service="Logo Design" onclick="toggleTile(this)"><div class="tile-icon"><span>🎨</span></div><div class="tile-label">Logo Design</div><div class="tile-price">From £300</div></div>
+      <div class="selector-tile" data-service="Website" onclick="toggleTile(this)"><div class="tile-icon"><span>🌐</span></div><div class="tile-label">Website</div><div class="tile-price">From £500</div></div>
+      <div class="selector-tile" data-service="Google Business Profile" onclick="toggleTile(this)"><div class="tile-icon"><span>📍</span></div><div class="tile-label">Google Profile</div><div class="tile-price">£150</div></div>
+      <div class="selector-tile" data-service="Social Media" onclick="toggleTile(this)"><div class="tile-icon"><span>📱</span></div><div class="tile-label">Social Media</div><div class="tile-price">From £300</div></div>
+      <div class="selector-tile" data-service="SEO" onclick="toggleTile(this)"><div class="tile-icon"><span>🔍</span></div><div class="tile-label">SEO</div><div class="tile-price">From £300</div></div>
+      <div class="selector-tile" data-service="Email Newsletter" onclick="toggleTile(this)"><div class="tile-icon"><span>✉️</span></div><div class="tile-label">Email Newsletter</div><div class="tile-price">From £300</div></div>
+      <div class="selector-tile" data-service="Copywriting" onclick="toggleTile(this)"><div class="tile-icon"><span>✍️</span></div><div class="tile-label">Copywriting</div><div class="tile-price">From £75/page</div></div>
+      <div class="selector-tile" data-service="Marketing Collateral" onclick="toggleTile(this)"><div class="tile-icon"><span>🖨️</span></div><div class="tile-label">Printed Materials</div><div class="tile-price">From £150</div></div>
     </div>
     <div class="selector-cta">
       <p id="selectorHint">Select what you need above, then hit the button — we'll take it from there.</p>
@@ -370,21 +325,9 @@
       <p class="section-subtitle" style="margin:0 auto">Three steps from first click to finished job.</p>
     </div>
     <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <h4>Pick What You Need</h4>
-        <p>Select your services above and tell us a bit about your business. No lengthy forms, no waffle — just what you need.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <h4>We Agree the Details</h4>
-        <p>You get a clear written proposal — fixed price, defined deliverables, no hidden extras. A 50% deposit starts the work.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <h4>Done. Fast.</h4>
-        <p>We deliver, you review, we refine. Balance on sign-off. Everything handed over and yours to keep forever.</p>
-      </div>
+      <div class="step"><div class="step-num">1</div><h4>Pick What You Need</h4><p>Choose a bundle or select individual services above. Tell us a bit about your business — no lengthy forms, no waffle.</p></div>
+      <div class="step"><div class="step-num">2</div><h4>We Agree the Details</h4><p>You get a clear written proposal — fixed price, defined deliverables, no hidden extras. A 50% deposit starts the work.</p></div>
+      <div class="step"><div class="step-num">3</div><h4>Done. Fast.</h4><p>We deliver, you review, we refine. Balance on sign-off. Everything handed over and yours to keep forever.</p></div>
     </div>
   </section>
 
@@ -444,7 +387,7 @@
   <footer>
     <div class="footer-top">
       <div class="footer-logo"><div class="footer-logo-mark">DMS</div>Devon Marketing Services</div>
-      <div class="footer-links"><a href="#">Privacy Policy</a><a href="#">Terms &amp; Conditions</a></div>
+      <div class="footer-links"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms &amp; Conditions</a></div>
     </div>
     <div class="footer-legal">
       © 2026 Devon Marketing Services. All rights reserved. &nbsp;·&nbsp;
