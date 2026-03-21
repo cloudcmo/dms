@@ -38,6 +38,7 @@
     .hero-strapline{font-size:1.05rem;line-height:1.75;color:var(--mid-grey);max-width:440px;margin-bottom:2.5rem}
     .hero-strapline strong{color:var(--charcoal);font-weight:600}
     .hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
+    .btn-or{font-size:.8rem;font-weight:600;color:var(--mid-grey);align-self:center;padding:0 .2rem}
     .btn-primary{display:inline-block;background:var(--coral);color:white;padding:.9rem 2rem;font-family:'Sora',sans-serif;font-size:.875rem;font-weight:600;text-decoration:none;border-radius:6px;transition:background .2s,transform .15s}
     .btn-primary:hover{background:var(--coral-dark);transform:translateY(-2px)}
     .btn-secondary{display:inline-block;border:2px solid var(--charcoal);color:var(--charcoal);padding:.9rem 2rem;font-family:'Sora',sans-serif;font-size:.875rem;font-weight:600;text-decoration:none;border-radius:6px;transition:all .2s}
@@ -189,6 +190,7 @@
       <p class="hero-strapline"><strong>West End quality at West Country prices.</strong> Whether you're a plumber, electrician, landscape gardener, tree surgeon, personal trainer, dog walker, locksmith or any kind of independent local business — we'll make you look brilliant and get you found.</p>
       <div class="hero-actions">
         <a href="#bundles" class="btn-primary">See Our Bundles</a>
+        <span class="btn-or">or</span>
         <a href="#selector" class="btn-secondary">Build Your Own</a>
       </div>
     </div>
@@ -227,19 +229,6 @@
       <div class="service-card"><h3>Marketing Collateral</h3><p>Flyers, posters and business cards that reflect the quality of your work — designed professionally, supplied print-ready.</p><span class="service-price">From £150</span></div>
     </div>
   </section>
-
-  <!-- PATH CHOOSER -->
-  <div class="path-banner">
-    <a href="#bundles" class="path-option">
-      <div class="path-option-label">Choose a Bundle</div>
-      <div class="path-option-sub">Pre-packaged, great value, ready to go</div>
-    </a>
-    <div class="path-or">or</div>
-    <a href="#selector" class="path-option">
-      <div class="path-option-label">Build Your Own</div>
-      <div class="path-option-sub">Pick only what your business needs</div>
-    </a>
-  </div>
 
   <!-- BUNDLES -->
   <section class="bundles" id="bundles">
@@ -300,7 +289,7 @@
   <!-- BUILD YOUR OWN -->
   <section class="selector" id="selector">
     <div class="section-eyebrow">Build Your Own</div>
-    <h2 class="section-title">Just want specific things? No problem.</h2>
+    <h2 class="section-title">Or choose exactly what you want.</h2>
     <p class="section-subtitle">Tick everything that applies.</p>
     <div class="selector-grid">
       <div class="selector-tile" data-service="Logo Design" onclick="toggleTile(this)"><div class="tile-icon"><span>🎨</span></div><div class="tile-label">Logo Design</div><div class="tile-price">From £300</div></div>
